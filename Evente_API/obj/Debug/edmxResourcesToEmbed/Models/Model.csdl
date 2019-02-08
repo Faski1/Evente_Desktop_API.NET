@@ -1,0 +1,681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EventeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Drzava">
+    <Key>
+      <PropertyRef Name="DrzavaId" />
+    </Key>
+    <Property Name="DrzavaId" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <Property Name="Naziv" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <NavigationProperty Name="Grads" Relationship="Self.FK_Drzava_Grad" FromRole="Drzava" ToRole="Grad" />
+  </EntityType>
+  <EntityType Name="Eventi">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <Property Name="Naziv" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="Opis" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="MinimumGodine" Type="Int32" />
+    <Property Name="ObjekatOdrzavanja" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="OrganizatorId" Nullable="false" Type="Int32" />
+    <Property Name="KategorijaId" Nullable="false" Type="Int32" />
+    <NavigationProperty Name="EventiUcesnicis" Relationship="Self.FK_Eventi_EventiUcesnici" FromRole="Eventi" ToRole="EventiUcesnici" />
+    <NavigationProperty Name="Kartes" Relationship="Self.FK_Eventi_Karte" FromRole="Eventi" ToRole="Karte" />
+    <NavigationProperty Name="Ocjenes" Relationship="Self.FK_Eventi_Ocjene" FromRole="Eventi" ToRole="Ocjene" />
+    <NavigationProperty Name="Kategorije" Relationship="Self.FK_Kategorija_Eventi" FromRole="Eventi" ToRole="Kategorije" />
+    <NavigationProperty Name="Organizatori" Relationship="Self.FK_Organizatori_Eventi" FromRole="Eventi" ToRole="Organizatori" />
+    <Property Name="GradId" Nullable="false" Type="Int32" />
+    <Property Name="Adresa" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <NavigationProperty Name="Grad" Relationship="EventeModel.FK_Grad_Eventi" FromRole="Eventi" ToRole="Grad" />
+    <Property Name="DatumOdrzavanja" Nullable="false" Precision="3" Type="DateTime" />
+    <Property Name="Status" Nullable="false" Type="Boolean" />
+    <Property Name="Slika" MaxLength="Max" FixedLength="false" Type="Binary" />
+    <Property Name="SlikaThumb" MaxLength="Max" FixedLength="false" Type="Binary" />
+  </EntityType>
+  <EntityType Name="EventiUcesnici">
+    <Key>
+      <PropertyRef Name="UcesnikId" />
+      <PropertyRef Name="EventiId" />
+    </Key>
+    <NavigationProperty Name="Eventi" Relationship="Self.FK_Eventi_EventiUcesnici" FromRole="EventiUcesnici" ToRole="Eventi" />
+    <NavigationProperty Name="Ucesnici" Relationship="Self.FK_Ucesnici_EventiUcesnici" FromRole="EventiUcesnici" ToRole="Ucesnici" />
+    <Property Name="EventiId" Nullable="false" Type="Int32" />
+    <Property Name="UcesnikId" Nullable="false" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Grad">
+    <Key>
+      <PropertyRef Name="GradId" />
+    </Key>
+    <Property Name="GradId" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <Property Name="Naziv" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="PostanskiBroj" MaxLength="10" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="DrzavaId" Nullable="false" Type="Int32" />
+    <NavigationProperty Name="Drzava" Relationship="Self.FK_Drzava_Grad" FromRole="Grad" ToRole="Drzava" />
+    <NavigationProperty Name="Eventis" Relationship="EventeModel.FK_Grad_Eventi" FromRole="Grad" ToRole="Eventi" />
+    <NavigationProperty Name="Korisnicis" Relationship="EventeModel.FK_Grad_Korisnici" FromRole="Grad" ToRole="Korisnici" />
+  </EntityType>
+  <EntityType Name="Karte">
+    <Key>
+      <PropertyRef Name="KarteId" />
+    </Key>
+    <Property Name="KarteId" Nullable="false" Type="Int32" />
+    <Property Name="BrojKarata" Nullable="false" Type="Int32" />
+    <Property Name="EventId" Nullable="false" Type="Int32" />
+    <NavigationProperty Name="Eventi" Relationship="Self.FK_Eventi_Karte" FromRole="Karte" ToRole="Eventi" />
+    <Property Name="KlasaId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Klasa1" Relationship="EventeModel.FK_Karte_Klasa" FromRole="Karte" ToRole="Klasa" />
+    <Property Name="Cijena" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="NarudzbaStavkes" Relationship="EventeModel.FK_Karte_NarudzbaStavke" FromRole="Karte" ToRole="NarudzbaStavke" />
+  </EntityType>
+  <EntityType Name="Kategorije">
+    <Key>
+      <PropertyRef Name="KategorijaId" />
+    </Key>
+    <Property Name="KategorijaId" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <Property Name="Naziv" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <NavigationProperty Name="Eventis" Relationship="Self.FK_Kategorija_Eventi" FromRole="Kategorije" ToRole="Eventi" />
+  </EntityType>
+  <EntityType Name="Korisnici">
+    <Key>
+      <PropertyRef Name="KorisnikId" />
+    </Key>
+    <Property Name="KorisnikId" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <Property Name="Ime" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="Prezime" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="Email" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="Telefon" MaxLength="20" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="KorisnickoIme" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="LozinkaHash" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="LozinkaSalt" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="Status" Nullable="false" Type="Boolean" />
+    <NavigationProperty Name="Narudzbes" Relationship="Self.FK_Korisnici_Narudzbe" FromRole="Korisnici" ToRole="Narudzbe" />
+    <NavigationProperty Name="KorisniciUloges" Relationship="Self.FK_Korisnik_KorisniciUloge" FromRole="Korisnici" ToRole="KorisniciUloge" />
+    <NavigationProperty Name="Ocjenes" Relationship="Self.FK_Korisnik_Ocjene" FromRole="Korisnici" ToRole="Ocjene" />
+    <Property Name="GradId" Type="Int32" />
+    <Property Name="Adresa" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <NavigationProperty Name="Grad" Relationship="EventeModel.FK_Grad_Korisnici" FromRole="Korisnici" ToRole="Grad" />
+    <Property Name="Slika" MaxLength="Max" FixedLength="false" Type="Binary" />
+    <Property Name="SlikaThumb" MaxLength="Max" FixedLength="false" Type="Binary" />
+  </EntityType>
+  <EntityType Name="KorisniciUloge">
+    <Key>
+      <PropertyRef Name="KorisnikUlogaId" />
+    </Key>
+    <Property Name="KorisnikUlogaId" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <Property Name="KorisnikId" Nullable="false" Type="Int32" />
+    <Property Name="UlogaId" Nullable="false" Type="Int32" />
+    <Property Name="DatumIzmjene" Nullable="false" Precision="3" Type="DateTime" />
+    <NavigationProperty Name="Korisnici" Relationship="Self.FK_Korisnik_KorisniciUloge" FromRole="KorisniciUloge" ToRole="Korisnici" />
+    <NavigationProperty Name="Uloge" Relationship="Self.FK_Uloge_KorisniciUloge" FromRole="KorisniciUloge" ToRole="Uloge" />
+  </EntityType>
+  <EntityType Name="Narudzbe">
+    <Key>
+      <PropertyRef Name="NarudzbaId" />
+    </Key>
+    <Property Name="NarudzbaId" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <Property Name="KorisnikId" Nullable="false" Type="Int32" />
+    <NavigationProperty Name="Korisnici" Relationship="Self.FK_Korisnici_Narudzbe" FromRole="Narudzbe" ToRole="Korisnici" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <Property Name="Otkazano" Type="Boolean" />
+    <Property Name="BrojNarudzbe" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Datum" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="NarudzbaStavkes" Relationship="EventeModel.FK_NarudzbaStavke_Narudzba" FromRole="Narudzbe" ToRole="NarudzbaStavke" />
+  </EntityType>
+  <EntityType Name="Ocjene">
+    <Key>
+      <PropertyRef Name="OcjenaId" />
+    </Key>
+    <Property Name="OcjenaId" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <Property Name="EventId" Nullable="false" Type="Int32" />
+    <Property Name="KorisnikId" Nullable="false" Type="Int32" />
+    <Property Name="Datum" Nullable="false" Precision="3" Type="DateTime" />
+    <Property Name="Ocjena" Nullable="false" Type="Int32" />
+    <NavigationProperty Name="Eventi" Relationship="Self.FK_Eventi_Ocjene" FromRole="Ocjene" ToRole="Eventi" />
+    <NavigationProperty Name="Korisnici" Relationship="Self.FK_Korisnik_Ocjene" FromRole="Ocjene" ToRole="Korisnici" />
+  </EntityType>
+  <EntityType Name="Organizatori">
+    <Key>
+      <PropertyRef Name="OrganizatorId" />
+    </Key>
+    <Property Name="OrganizatorId" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <Property Name="Naziv" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="Telefon" MaxLength="25" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="Fax" MaxLength="25" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="Web" MaxLength="100" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="Email" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="ZiroRacun" MaxLength="255" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="Napomena" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
+    <NavigationProperty Name="Eventis" Relationship="Self.FK_Organizatori_Eventi" FromRole="Organizatori" ToRole="Eventi" />
+  </EntityType>
+  <EntityType Name="Ucesnici">
+    <Key>
+      <PropertyRef Name="UcesnikId" />
+    </Key>
+    <Property Name="UcesnikId" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <Property Name="Naziv" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <NavigationProperty Name="EventiUcesnicis" Relationship="Self.FK_Ucesnici_EventiUcesnici" FromRole="Ucesnici" ToRole="EventiUcesnici" />
+  </EntityType>
+  <EntityType Name="Uloge">
+    <Key>
+      <PropertyRef Name="UlogaId" />
+    </Key>
+    <Property Name="UlogaId" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <Property Name="Naziv" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="Opis" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+    <NavigationProperty Name="KorisniciUloges" Relationship="Self.FK_Uloge_KorisniciUloge" FromRole="Uloge" ToRole="KorisniciUloge" />
+  </EntityType>
+  <Association Name="FK_Drzava_Grad">
+    <End Type="Self.Drzava" Multiplicity="1" Role="Drzava" />
+    <End Type="Self.Grad" Multiplicity="*" Role="Grad" />
+    <ReferentialConstraint>
+      <Principal Role="Drzava">
+        <PropertyRef Name="DrzavaId" />
+      </Principal>
+      <Dependent Role="Grad">
+        <PropertyRef Name="DrzavaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Eventi_EventiUcesnici">
+    <End Type="Self.Eventi" Multiplicity="1" Role="Eventi" />
+    <End Type="Self.EventiUcesnici" Multiplicity="*" Role="EventiUcesnici" />
+    <ReferentialConstraint>
+      <Principal Role="Eventi">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="EventiUcesnici">
+        <PropertyRef Name="EventiId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Eventi_Karte">
+    <End Type="Self.Eventi" Multiplicity="1" Role="Eventi" />
+    <End Type="Self.Karte" Multiplicity="*" Role="Karte" />
+    <ReferentialConstraint>
+      <Principal Role="Eventi">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="Karte">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Eventi_Ocjene">
+    <End Type="Self.Eventi" Multiplicity="1" Role="Eventi" />
+    <End Type="Self.Ocjene" Multiplicity="*" Role="Ocjene" />
+    <ReferentialConstraint>
+      <Principal Role="Eventi">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="Ocjene">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kategorija_Eventi">
+    <End Type="Self.Kategorije" Multiplicity="1" Role="Kategorije" />
+    <End Type="Self.Eventi" Multiplicity="*" Role="Eventi" />
+    <ReferentialConstraint>
+      <Principal Role="Kategorije">
+        <PropertyRef Name="KategorijaId" />
+      </Principal>
+      <Dependent Role="Eventi">
+        <PropertyRef Name="KategorijaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Organizatori_Eventi">
+    <End Type="Self.Organizatori" Multiplicity="1" Role="Organizatori" />
+    <End Type="Self.Eventi" Multiplicity="*" Role="Eventi" />
+    <ReferentialConstraint>
+      <Principal Role="Organizatori">
+        <PropertyRef Name="OrganizatorId" />
+      </Principal>
+      <Dependent Role="Eventi">
+        <PropertyRef Name="OrganizatorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ucesnici_EventiUcesnici">
+    <End Type="Self.Ucesnici" Multiplicity="1" Role="Ucesnici" />
+    <End Type="Self.EventiUcesnici" Multiplicity="*" Role="EventiUcesnici" />
+    <ReferentialConstraint>
+      <Principal Role="Ucesnici">
+        <PropertyRef Name="UcesnikId" />
+      </Principal>
+      <Dependent Role="EventiUcesnici">
+        <PropertyRef Name="UcesnikId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Korisnici_Narudzbe">
+    <End Type="Self.Korisnici" Multiplicity="1" Role="Korisnici" />
+    <End Type="Self.Narudzbe" Multiplicity="*" Role="Narudzbe" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnici">
+        <PropertyRef Name="KorisnikId" />
+      </Principal>
+      <Dependent Role="Narudzbe">
+        <PropertyRef Name="KorisnikId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Korisnik_KorisniciUloge">
+    <End Type="Self.Korisnici" Multiplicity="1" Role="Korisnici" />
+    <End Type="Self.KorisniciUloge" Multiplicity="*" Role="KorisniciUloge" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnici">
+        <PropertyRef Name="KorisnikId" />
+      </Principal>
+      <Dependent Role="KorisniciUloge">
+        <PropertyRef Name="KorisnikId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Korisnik_Ocjene">
+    <End Type="Self.Korisnici" Multiplicity="1" Role="Korisnici" />
+    <End Type="Self.Ocjene" Multiplicity="*" Role="Ocjene" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnici">
+        <PropertyRef Name="KorisnikId" />
+      </Principal>
+      <Dependent Role="Ocjene">
+        <PropertyRef Name="KorisnikId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Uloge_KorisniciUloge">
+    <End Type="Self.Uloge" Multiplicity="1" Role="Uloge" />
+    <End Type="Self.KorisniciUloge" Multiplicity="*" Role="KorisniciUloge" />
+    <ReferentialConstraint>
+      <Principal Role="Uloge">
+        <PropertyRef Name="UlogaId" />
+      </Principal>
+      <Dependent Role="KorisniciUloge">
+        <PropertyRef Name="UlogaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EventeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Drzavas" EntityType="Self.Drzava" />
+    <EntitySet Name="Eventis" EntityType="Self.Eventi" />
+    <EntitySet Name="EventiUcesnicis" EntityType="Self.EventiUcesnici" />
+    <EntitySet Name="Grads" EntityType="Self.Grad" />
+    <EntitySet Name="Kartes" EntityType="Self.Karte" />
+    <EntitySet Name="Kategorijes" EntityType="Self.Kategorije" />
+    <EntitySet Name="Korisnicis" EntityType="Self.Korisnici" />
+    <EntitySet Name="KorisniciUloges" EntityType="Self.KorisniciUloge" />
+    <EntitySet Name="Narudzbes" EntityType="Self.Narudzbe" />
+    <EntitySet Name="Ocjenes" EntityType="Self.Ocjene" />
+    <EntitySet Name="Organizatoris" EntityType="Self.Organizatori" />
+    <EntitySet Name="Ucesnicis" EntityType="Self.Ucesnici" />
+    <EntitySet Name="Uloges" EntityType="Self.Uloge" />
+    <AssociationSet Name="FK_Drzava_Grad" Association="Self.FK_Drzava_Grad">
+      <End EntitySet="Drzavas" Role="Drzava" />
+      <End EntitySet="Grads" Role="Grad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Eventi_EventiUcesnici" Association="Self.FK_Eventi_EventiUcesnici">
+      <End EntitySet="Eventis" Role="Eventi" />
+      <End EntitySet="EventiUcesnicis" Role="EventiUcesnici" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Eventi_Karte" Association="Self.FK_Eventi_Karte">
+      <End EntitySet="Eventis" Role="Eventi" />
+      <End EntitySet="Kartes" Role="Karte" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Eventi_Ocjene" Association="Self.FK_Eventi_Ocjene">
+      <End EntitySet="Eventis" Role="Eventi" />
+      <End EntitySet="Ocjenes" Role="Ocjene" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kategorija_Eventi" Association="Self.FK_Kategorija_Eventi">
+      <End EntitySet="Kategorijes" Role="Kategorije" />
+      <End EntitySet="Eventis" Role="Eventi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Organizatori_Eventi" Association="Self.FK_Organizatori_Eventi">
+      <End EntitySet="Organizatoris" Role="Organizatori" />
+      <End EntitySet="Eventis" Role="Eventi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ucesnici_EventiUcesnici" Association="Self.FK_Ucesnici_EventiUcesnici">
+      <End EntitySet="Ucesnicis" Role="Ucesnici" />
+      <End EntitySet="EventiUcesnicis" Role="EventiUcesnici" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Korisnici_Narudzbe" Association="Self.FK_Korisnici_Narudzbe">
+      <End EntitySet="Korisnicis" Role="Korisnici" />
+      <End EntitySet="Narudzbes" Role="Narudzbe" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Korisnik_KorisniciUloge" Association="Self.FK_Korisnik_KorisniciUloge">
+      <End EntitySet="Korisnicis" Role="Korisnici" />
+      <End EntitySet="KorisniciUloges" Role="KorisniciUloge" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Korisnik_Ocjene" Association="Self.FK_Korisnik_Ocjene">
+      <End EntitySet="Korisnicis" Role="Korisnici" />
+      <End EntitySet="Ocjenes" Role="Ocjene" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Uloge_KorisniciUloge" Association="Self.FK_Uloge_KorisniciUloge">
+      <End EntitySet="Uloges" Role="Uloge" />
+      <End EntitySet="KorisniciUloges" Role="KorisniciUloge" />
+    </AssociationSet>
+    <FunctionImport Name="esp_Korisnici_SelectAll" ReturnType="Collection(EventeModel.Korisnici_Result)" />
+    <FunctionImport Name="esp_Korisnici_SelectByImePrezime" ReturnType="Collection(EventeModel.Korisnici_Result)">
+      <Parameter Name="ImePrezime" Mode="In" Type="String" />
+    </FunctionImport>
+    <AssociationSet Name="FK_Grad_Eventi" Association="EventeModel.FK_Grad_Eventi">
+      <End EntitySet="Grads" Role="Grad" />
+      <End EntitySet="Eventis" Role="Eventi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Grad_Korisnici" Association="EventeModel.FK_Grad_Korisnici">
+      <End EntitySet="Grads" Role="Grad" />
+      <End EntitySet="Korisnicis" Role="Korisnici" />
+    </AssociationSet>
+    <FunctionImport Name="esp_Grad_SelectAll" ReturnType="Collection(EventeModel.Grad_Result)" />
+    <FunctionImport Name="esp_Drzava_SelectAll" EntitySet="Drzavas" ReturnType="Collection(EventeModel.Drzava)" />
+    <FunctionImport Name="esp_Korisnici_Update">
+      <Parameter Name="KorisnikId" Mode="In" Type="Int32" />
+      <Parameter Name="Ime" Mode="In" Type="String" />
+      <Parameter Name="Prezime" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Telefon" Mode="In" Type="String" />
+      <Parameter Name="KorisnickoIme" Mode="In" Type="String" />
+      <Parameter Name="LozinkaSalt" Mode="In" Type="String" />
+      <Parameter Name="LozinkaHash" Mode="In" Type="String" />
+      <Parameter Name="Status" Mode="In" Type="Boolean" />
+      <Parameter Name="GradId" Mode="In" Type="Int32" />
+      <Parameter Name="Adresa" Mode="In" Type="String" />
+      <Parameter Name="Slika" Mode="In" Type="Binary" />
+      <Parameter Name="SlikaThumb" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="esp_KorisniciUloge_Insert">
+      <Parameter Name="KorisnikId" Mode="In" Type="Int32" />
+      <Parameter Name="UlogaId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Uloge_SelectAll" EntitySet="Uloges" ReturnType="Collection(EventeModel.Uloge)" />
+    <FunctionImport Name="esp_Korisnici_Delete">
+      <Parameter Name="KorisnikId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Korisnici_Insert" ReturnType="Collection(Decimal)">
+      <Parameter Name="Ime" Mode="In" Type="String" />
+      <Parameter Name="Prezime" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Telefon" Mode="In" Type="String" />
+      <Parameter Name="KorisnickoIme" Mode="In" Type="String" />
+      <Parameter Name="LozinkaSalt" Mode="In" Type="String" />
+      <Parameter Name="LozinkaHash" Mode="In" Type="String" />
+      <Parameter Name="Status" Mode="In" Type="Boolean" />
+      <Parameter Name="Adresa" Mode="In" Type="String" />
+      <Parameter Name="GradId" Mode="In" Type="Int32" />
+      <Parameter Name="Slika" Mode="In" Type="Binary" />
+      <Parameter Name="SlikaThumb" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Organizatori_SelectAll" EntitySet="Organizatoris" ReturnType="Collection(EventeModel.Organizatori)" />
+    <FunctionImport Name="esp_Organizatori_BasicSelect" ReturnType="Collection(EventeModel.Organizatori_Result)" />
+    <FunctionImport Name="esp_Kategorija_SelectAll" EntitySet="Kategorijes" ReturnType="Collection(EventeModel.Kategorije)" />
+    <FunctionImport Name="esp_Ucesnici_SelectAll" EntitySet="Ucesnicis" ReturnType="Collection(EventeModel.Ucesnici)" />
+    <FunctionImport Name="esp_Eventi_SelectAll" EntitySet="Eventis" ReturnType="Collection(EventeModel.Eventi)" />
+    <FunctionImport Name="esp_Eventi_Insert" ReturnType="Collection(Decimal)">
+      <Parameter Name="Naziv" Mode="In" Type="String" />
+      <Parameter Name="Opis" Mode="In" Type="String" />
+      <Parameter Name="MinimumGodine" Mode="In" Type="Int32" />
+      <Parameter Name="ObjekatOdrzavanja" Mode="In" Type="String" />
+      <Parameter Name="Adresa" Mode="In" Type="String" />
+      <Parameter Name="OrganizatorId" Mode="In" Type="Int32" />
+      <Parameter Name="KategorijaId" Mode="In" Type="Int32" />
+      <Parameter Name="GradId" Mode="In" Type="Int32" />
+      <Parameter Name="Slika" Mode="In" Type="Binary" />
+      <Parameter Name="SlikaThumb" Mode="In" Type="Binary" />
+      <Parameter Name="DatumOdrzavanja" Mode="In" Type="DateTime" />
+      <Parameter Name="Status" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="esp_EventiUcesnici_Insert" ReturnType="Collection(Decimal)">
+      <Parameter Name="EventiId" Mode="In" Type="Int32" />
+      <Parameter Name="UcesnikId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Eventi_BasicSelectAll" ReturnType="Collection(EventeModel.Eventi_Result)" />
+    <EntitySet Name="Klasas" EntityType="EventeModel.Klasa" />
+    <AssociationSet Name="FK_Karte_Klasa" Association="EventeModel.FK_Karte_Klasa">
+      <End Role="Klasa" EntitySet="Klasas" />
+      <End Role="Karte" EntitySet="Kartes" />
+    </AssociationSet>
+    <FunctionImport Name="esp_Eventi_SelectByNaziv" ReturnType="Collection(EventeModel.Eventi_SearchResult)">
+      <Parameter Name="Naziv" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Eventi_Delete">
+      <Parameter Name="EventId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Eventi_Update">
+      <Parameter Name="EventId" Mode="In" Type="Int32" />
+      <Parameter Name="Naziv" Mode="In" Type="String" />
+      <Parameter Name="MinimumGodine" Mode="In" Type="Int32" />
+      <Parameter Name="ObjekatOdrazavanja" Mode="In" Type="String" />
+      <Parameter Name="Opis" Mode="In" Type="String" />
+      <Parameter Name="Adresa" Mode="In" Type="String" />
+      <Parameter Name="DatumOdrzavanja" Mode="In" Type="DateTime" />
+      <Parameter Name="Status" Mode="In" Type="Boolean" />
+      <Parameter Name="Slika" Mode="In" Type="Binary" />
+      <Parameter Name="SlikaThumb" Mode="In" Type="Binary" />
+      <Parameter Name="OrganizatorId" Mode="In" Type="Int32" />
+      <Parameter Name="KategorijaId" Mode="In" Type="Int32" />
+      <Parameter Name="GradId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_EventiUcesnici_SelectByEventUcesnik" ReturnType="Collection(EventeModel.EventiUcesnici_SearchResult)">
+      <Parameter Name="EventId" Mode="In" Type="Int32" />
+      <Parameter Name="UcesnikId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_EventiUcesnici_Delete">
+      <Parameter Name="EventiId" Mode="In" Type="Int32" />
+      <Parameter Name="UcesnikId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Karte_SelectByEventKlasa" ReturnType="Collection(EventeModel.Karte_SearchResult)">
+      <Parameter Name="EventId" Mode="In" Type="Int32" />
+      <Parameter Name="KlasaId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Karte_Delete">
+      <Parameter Name="KarteId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Korisnici_LoginSelect" ReturnType="Collection(EventeModel.Korisnici_LoginResult)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Korisnici_SimpleInsert" ReturnType="Collection(Decimal)">
+      <Parameter Name="Ime" Mode="In" Type="String" />
+      <Parameter Name="Prezime" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="KorisnickoIme" Mode="In" Type="String" />
+      <Parameter Name="LozinkaSalt" Mode="In" Type="String" />
+      <Parameter Name="LozinkaHash" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Eventi_SelectByVrsta" ReturnType="Collection(EventeModel.Eventi_SelectByVrsta)">
+      <Parameter Name="VrstaId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Eventi_Details" ReturnType="Collection(EventeModel.Eventi_DetailsResult)">
+      <Parameter Name="EventId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Eventi_Karte" ReturnType="Collection(EventeModel.Karte_KategorijaResult)">
+      <Parameter Name="EventId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="NarudzbaStavkes" EntityType="EventeModel.NarudzbaStavke" />
+    <AssociationSet Name="FK_Karte_NarudzbaStavke" Association="EventeModel.FK_Karte_NarudzbaStavke">
+      <End Role="Karte" EntitySet="Kartes" />
+      <End Role="NarudzbaStavke" EntitySet="NarudzbaStavkes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NarudzbaStavke_Narudzba" Association="EventeModel.FK_NarudzbaStavke_Narudzba">
+      <End Role="Narudzbe" EntitySet="Narudzbes" />
+      <End Role="NarudzbaStavke" EntitySet="NarudzbaStavkes" />
+    </AssociationSet>
+    <FunctionImport Name="esp_Narudzbe_Insert">
+      <Parameter Name="KorisnikId" Mode="In" Type="Int32" />
+      <Parameter Name="BrojNarudzbe" Mode="In" Type="String" />
+      <Parameter Name="Datum" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="esp_NarudzbeStavke_Insert">
+      <Parameter Name="KarteId" Mode="In" Type="Int32" />
+      <Parameter Name="BrojKarata" Mode="In" Type="Int32" />
+      <Parameter Name="NarudzbaId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Narudzbe_LastId" ReturnType="Collection(Int32)" />
+  </EntityContainer>
+  <ComplexType Name="Korisnici_Result">
+    <Property Type="Int32" Name="KorisnikId" Nullable="false" />
+    <Property Type="String" Name="Ime" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Prezime" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Telefon" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="KorisnickoIme" Nullable="true" MaxLength="15" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </ComplexType>
+  <Association Name="FK_Grad_Eventi">
+    <End Type="EventeModel.Grad" Multiplicity="1" Role="Grad" />
+    <End Type="EventeModel.Eventi" Multiplicity="*" Role="Eventi" />
+    <ReferentialConstraint>
+      <Principal Role="Grad">
+        <PropertyRef Name="GradId" />
+      </Principal>
+      <Dependent Role="Eventi">
+        <PropertyRef Name="GradId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Grad_Korisnici">
+    <End Type="EventeModel.Grad" Multiplicity="0..1" Role="Grad" />
+    <End Type="EventeModel.Korisnici" Multiplicity="*" Role="Korisnici" />
+    <ReferentialConstraint>
+      <Principal Role="Grad">
+        <PropertyRef Name="GradId" />
+      </Principal>
+      <Dependent Role="Korisnici">
+        <PropertyRef Name="GradId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="Grad_Result">
+    <Property Type="Int32" Name="GradId" Nullable="false" />
+    <Property Type="String" Name="Naziv" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Organizatori_Result">
+    <Property Type="Int32" Name="OrganizatorId" Nullable="false" />
+    <Property Type="String" Name="Naziv" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="Eventi_Result">
+    <Property Type="Int32" Name="EventId" Nullable="false" />
+    <Property Type="String" Name="Naziv" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="Klasa">
+    <Key>
+      <PropertyRef Name="Naziv" />
+    </Key>
+    <Property Name="Naziv" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Kartes" Relationship="EventeModel.FK_Karte_Klasa" FromRole="Klasa" ToRole="Karte" />
+  </EntityType>
+  <Association Name="FK_Karte_Klasa">
+    <End Type="EventeModel.Klasa" Role="Klasa" Multiplicity="1" />
+    <End Type="EventeModel.Karte" Role="Karte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Klasa">
+        <PropertyRef Name="Naziv" />
+      </Principal>
+      <Dependent Role="Karte">
+        <PropertyRef Name="KlasaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="Eventi_SearchResult">
+    <Property Type="Int32" Name="EventId" Nullable="false" />
+    <Property Type="String" Name="Naziv" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="MinimumGodine" Nullable="true" />
+    <Property Type="String" Name="ObjekatOdrzavanja" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Organizatori" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Kategorija" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Grad" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Adresa" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="DatumOdrzavanja" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <Property Type="Binary" Name="SlikaThumb" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="EventiUcesnici_SearchResult">
+    <Property Type="Int32" Name="EventiId" Nullable="false" />
+    <Property Type="Int32" Name="UcesnikId" Nullable="false" />
+    <Property Type="String" Name="EventNaziv" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="UcesnikNaziv" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Karte_SearchResult">
+    <Property Type="Int32" Name="KarteId" Nullable="false" />
+    <Property Type="String" Name="EventNaziv" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="KlasaNaziv" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="BrojKarata" Nullable="false" />
+    <Property Type="Int32" Name="Cijena" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Korisnici_LoginResult">
+    <Property Type="Int32" Name="KorisnikId" Nullable="false" />
+    <Property Type="String" Name="KorisnickoIme" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="LozinkaSalt" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LozinkaHash" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <Property Type="String" Name="Ime" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Prezime" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="UlogaId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Eventi_SelectByVrsta">
+    <Property Type="Int32" Name="EventId" Nullable="false" />
+    <Property Type="String" Name="Naziv" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Grad" Nullable="false" MaxLength="50" />
+    <Property Type="Binary" Name="SlikaThumb" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Eventi_DetailsResult">
+    <Property Type="Int32" Name="EventId" Nullable="false" />
+    <Property Type="String" Name="Naziv" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Opis" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="MinimumGodine" Nullable="true" />
+    <Property Type="String" Name="ObjekatOdrzavanja" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Grad" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Adresa" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="DatumOdrzavanja" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <Property Type="String" Name="Kategorija" Nullable="false" MaxLength="50" />
+    <Property Type="Binary" Name="Slika" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Karte_KategorijaResult">
+    <Property Type="String" Name="Klasa" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Cijena" Nullable="false" />
+    <Property Type="Int32" Name="BrojKarata" Nullable="false" />
+    <Property Type="Int32" Name="KarteId" Nullable="false" />
+    <Property Type="Int32" Name="EventId" Nullable="false" />
+    <Property Type="String" Name="Naziv" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="NarudzbaStavke">
+    <Key>
+      <PropertyRef Name="NarudzbaStavkeId" />
+    </Key>
+    <Property Name="NarudzbaStavkeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KarteId" Type="Int32" Nullable="false" />
+    <Property Name="BrojKarata" Type="Int32" Nullable="false" />
+    <Property Name="NarudzbaId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Karte" Relationship="EventeModel.FK_Karte_NarudzbaStavke" FromRole="NarudzbaStavke" ToRole="Karte" />
+    <NavigationProperty Name="Narudzbe" Relationship="EventeModel.FK_NarudzbaStavke_Narudzba" FromRole="NarudzbaStavke" ToRole="Narudzbe" />
+  </EntityType>
+  <Association Name="FK_Karte_NarudzbaStavke">
+    <End Type="EventeModel.Karte" Role="Karte" Multiplicity="1" />
+    <End Type="EventeModel.NarudzbaStavke" Role="NarudzbaStavke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Karte">
+        <PropertyRef Name="KarteId" />
+      </Principal>
+      <Dependent Role="NarudzbaStavke">
+        <PropertyRef Name="KarteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NarudzbaStavke_Narudzba">
+    <End Type="EventeModel.Narudzbe" Role="Narudzbe" Multiplicity="1" />
+    <End Type="EventeModel.NarudzbaStavke" Role="NarudzbaStavke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Narudzbe">
+        <PropertyRef Name="NarudzbaId" />
+      </Principal>
+      <Dependent Role="NarudzbaStavke">
+        <PropertyRef Name="NarudzbaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="esp_Kategorije_SelectAll_Result">
+    <Property Type="Int32" Name="KategorijaId" Nullable="false" />
+    <Property Type="String" Name="Naziv" Nullable="false" MaxLength="50" />
+  </ComplexType>
+</Schema>
