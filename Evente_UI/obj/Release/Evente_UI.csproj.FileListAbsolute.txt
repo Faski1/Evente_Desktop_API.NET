@@ -1,0 +1,265 @@
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\SqlServerTypes\x64\msvcr120.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\SqlServerTypes\x86\msvcr120.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\Evente_UI.exe.config
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\Evente_UI.exe
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\Evente_UI.pdb
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\EntityFramework.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\Evente_API.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\Microsoft.ReportViewer.Design.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\Microsoft.SqlServer.Types.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\Newtonsoft.Json.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\System.Net.Http.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\System.Net.Http.Formatting.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\System.Security.Cryptography.Algorithms.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\System.Security.Cryptography.Encoding.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\System.Security.Cryptography.Primitives.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\System.Web.Http.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\System.Web.Http.WebHost.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\EnvDTE.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\stdole.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\Microsoft.MSXML.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\Evente_API.pdb
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\Evente_API.dll.config
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\EntityFramework.xml
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\Newtonsoft.Json.pdb
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\Newtonsoft.Json.xml
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\System.Net.Http.Formatting.xml
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\System.Web.Http.xml
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\System.Web.Http.WebHost.xml
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.csprojAssemblyReference.cache
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.AddCategories.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.AddGrad.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.AddDrzava.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.AddEventi.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.EditEventi.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.EventiMain.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.AddUcesnik.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.PregledUcesnici.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.UcesniciMain.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.PregledEventi.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.MainLoginForm.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.Messages.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.AddOrganizatori.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.AddUcesnici.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.ReportPretraga.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.ReportViewForm.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.KarteMain.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.PregledKarte.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.AddKlasa.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.Unos.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.MainPage.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.Properties.Resources.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.AddForm.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.EditForm.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.KorisniciMain.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.PregledKorisnika.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.csproj.GenerateResource.cache
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.csproj.CoreCompileInputs.cache
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.csproj.CopyComplete
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.exe
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.pdb
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.ReportSifra.resources
+C:\Users\Faris Haskovic\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.ReportMain.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\SqlServerTypes\x64\msvcr120.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\SqlServerTypes\x86\msvcr120.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Evente_UI.exe.config
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Evente_UI.exe
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Evente_UI.pdb
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\EntityFramework.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Evente_API.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.ReportViewer.Design.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.SqlServer.Types.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Newtonsoft.Json.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\System.Net.Http.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\System.Net.Http.Formatting.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\System.Security.Cryptography.Algorithms.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\System.Security.Cryptography.Encoding.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\System.Security.Cryptography.Primitives.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\System.Security.Cryptography.X509Certificates.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\System.Web.Http.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\System.Web.Http.WebHost.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Evente_PCL.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\EnvDTE.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\PCLCrypto.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\stdole.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.VSHelp.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.Shell.Interop.9.0.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.ProjectAggregator.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.ComponentModelHost.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.TemplateWizardInterface.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.Debugger.InteropA.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\EnvDTE80.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.Build.Tasks.Core.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.Data.Services.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\VSLangProj.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.Shell.Interop.11.0.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.Data.Core.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.Shell.Interop.10.0.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\VSLangProj80.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.ManagedInterfaces.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.Debugger.Interop.11.0.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Validation.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\System.Threading.Tasks.Dataflow.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.GraphModel.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.MSXML.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.Build.Utilities.Core.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.TextManager.Interop.10.0.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.Build.Framework.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\VSLangProj2.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Evente_API.pdb
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Evente_API.dll.config
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\EntityFramework.xml
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Newtonsoft.Json.pdb
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Newtonsoft.Json.xml
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\System.Net.Http.Formatting.xml
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\System.Web.Http.xml
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\System.Web.Http.WebHost.xml
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Evente_PCL.pdb
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Evente_PCL.dll.config
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\PCLCrypto.xml
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Microsoft.VisualStudio.TemplateWizardInterface.xml
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\Validation.xml
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.csprojAssemblyReference.cache
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.exe.config
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.AddCategories.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.AddGrad.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.AddDrzava.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.AddEventi.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.EditEventi.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.EventiMain.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.AddUcesnik.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.PregledUcesnici.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.UcesniciMain.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.PregledEventi.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.MainLoginForm.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.Messages.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.AddOrganizatori.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.AddUcesnici.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.ReportMain.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.ReportPretraga.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.ReportSifra.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.ReportViewForm.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.KarteMain.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.PregledKarte.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.AddKlasa.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.Unos.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.MainPage.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.Properties.Resources.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.AddForm.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.EditForm.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.KorisniciMain.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.PregledKorisnika.resources
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.csproj.GenerateResource.cache
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.csproj.CoreCompileInputs.cache
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.csproj.CopyComplete
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.exe
+C:\Users\FarisHasković\source\repos\Evente\Evente_UI\obj\Release\Evente_UI.pdb

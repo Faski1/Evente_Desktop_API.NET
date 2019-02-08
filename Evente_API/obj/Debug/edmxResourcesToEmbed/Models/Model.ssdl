@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EventeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Drzava">
+    <Key>
+      <PropertyRef Name="DrzavaId" />
+    </Key>
+    <Property Name="DrzavaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Naziv" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Eventi">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Naziv" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Opis" Type="nvarchar" MaxLength="200" />
+    <Property Name="MinimumGodine" Type="int" />
+    <Property Name="ObjekatOdrzavanja" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="OrganizatorId" Type="int" Nullable="false" />
+    <Property Name="KategorijaId" Type="int" Nullable="false" />
+    <Property Name="GradId" Type="int" Nullable="false" />
+    <Property Name="Adresa" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DatumOdrzavanja" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="Slika" Type="varbinary(max)" />
+    <Property Name="SlikaThumb" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="EventiUcesnici">
+    <Key>
+      <PropertyRef Name="EventiId" />
+      <PropertyRef Name="UcesnikId" />
+    </Key>
+    <Property Name="EventiId" Type="int" Nullable="false" />
+    <Property Name="UcesnikId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Grad">
+    <Key>
+      <PropertyRef Name="GradId" />
+    </Key>
+    <Property Name="GradId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Naziv" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PostanskiBroj" Type="nvarchar" MaxLength="10" />
+    <Property Name="DrzavaId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Karte">
+    <Key>
+      <PropertyRef Name="KarteId" />
+    </Key>
+    <Property Name="KarteId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BrojKarata" Type="int" Nullable="false" />
+    <Property Name="KlasaId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Cijena" Type="int" Nullable="false" />
+    <Property Name="EventId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Kategorije">
+    <Key>
+      <PropertyRef Name="KategorijaId" />
+    </Key>
+    <Property Name="KategorijaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Naziv" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Klasa">
+    <Key>
+      <PropertyRef Name="Naziv" />
+    </Key>
+    <Property Name="Naziv" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Korisnici">
+    <Key>
+      <PropertyRef Name="KorisnikId" />
+    </Key>
+    <Property Name="KorisnikId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ime" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Prezime" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="20" />
+    <Property Name="KorisnickoIme" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="LozinkaHash" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LozinkaSalt" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="GradId" Type="int" />
+    <Property Name="Adresa" Type="nvarchar" MaxLength="50" />
+    <Property Name="Slika" Type="varbinary(max)" />
+    <Property Name="SlikaThumb" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="KorisniciUloge">
+    <Key>
+      <PropertyRef Name="KorisnikUlogaId" />
+    </Key>
+    <Property Name="KorisnikUlogaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KorisnikId" Type="int" Nullable="false" />
+    <Property Name="UlogaId" Type="int" Nullable="false" />
+    <Property Name="DatumIzmjene" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NarudzbaStavke">
+    <Key>
+      <PropertyRef Name="NarudzbaStavkeId" />
+    </Key>
+    <Property Name="NarudzbaStavkeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KarteId" Type="int" Nullable="false" />
+    <Property Name="BrojKarata" Type="int" Nullable="false" />
+    <Property Name="NarudzbaId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Narudzbe">
+    <Key>
+      <PropertyRef Name="NarudzbaId" />
+    </Key>
+    <Property Name="NarudzbaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KorisnikId" Type="int" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="Otkazano" Type="bit" />
+    <Property Name="BrojNarudzbe" Type="nvarchar" MaxLength="20" />
+    <Property Name="Datum" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Ocjene">
+    <Key>
+      <PropertyRef Name="OcjenaId" />
+    </Key>
+    <Property Name="OcjenaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EventId" Type="int" Nullable="false" />
+    <Property Name="KorisnikId" Type="int" Nullable="false" />
+    <Property Name="Datum" Type="datetime" Nullable="false" />
+    <Property Name="Ocjena" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Organizatori">
+    <Key>
+      <PropertyRef Name="OrganizatorId" />
+    </Key>
+    <Property Name="OrganizatorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Naziv" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="25" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="25" />
+    <Property Name="Web" Type="nvarchar" MaxLength="100" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ZiroRacun" Type="nvarchar" MaxLength="255" />
+    <Property Name="Napomena" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Ucesnici">
+    <Key>
+      <PropertyRef Name="UcesnikId" />
+    </Key>
+    <Property Name="UcesnikId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Naziv" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Uloge">
+    <Key>
+      <PropertyRef Name="UlogaId" />
+    </Key>
+    <Property Name="UlogaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Naziv" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Opis" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <Association Name="FK_Drzava_Grad">
+    <End Role="Drzava" Type="Self.Drzava" Multiplicity="1" />
+    <End Role="Grad" Type="Self.Grad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drzava">
+        <PropertyRef Name="DrzavaId" />
+      </Principal>
+      <Dependent Role="Grad">
+        <PropertyRef Name="DrzavaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Eventi_EventiUcesnici">
+    <End Role="Eventi" Type="Self.Eventi" Multiplicity="1" />
+    <End Role="EventiUcesnici" Type="Self.EventiUcesnici" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Eventi">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="EventiUcesnici">
+        <PropertyRef Name="EventiId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Eventi_Ocjene">
+    <End Role="Eventi" Type="Self.Eventi" Multiplicity="1" />
+    <End Role="Ocjene" Type="Self.Ocjene" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Eventi">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="Ocjene">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Grad_Eventi">
+    <End Role="Grad" Type="Self.Grad" Multiplicity="1" />
+    <End Role="Eventi" Type="Self.Eventi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grad">
+        <PropertyRef Name="GradId" />
+      </Principal>
+      <Dependent Role="Eventi">
+        <PropertyRef Name="GradId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Grad_Korisnici">
+    <End Role="Grad" Type="Self.Grad" Multiplicity="0..1" />
+    <End Role="Korisnici" Type="Self.Korisnici" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grad">
+        <PropertyRef Name="GradId" />
+      </Principal>
+      <Dependent Role="Korisnici">
+        <PropertyRef Name="GradId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Karte_Eventi">
+    <End Role="Eventi" Type="Self.Eventi" Multiplicity="1" />
+    <End Role="Karte" Type="Self.Karte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Eventi">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="Karte">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Karte_Klasa">
+    <End Role="Klasa" Type="Self.Klasa" Multiplicity="1" />
+    <End Role="Karte" Type="Self.Karte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Klasa">
+        <PropertyRef Name="Naziv" />
+      </Principal>
+      <Dependent Role="Karte">
+        <PropertyRef Name="KlasaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Karte_NarudzbaStavke">
+    <End Role="Karte" Type="Self.Karte" Multiplicity="1" />
+    <End Role="NarudzbaStavke" Type="Self.NarudzbaStavke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Karte">
+        <PropertyRef Name="KarteId" />
+      </Principal>
+      <Dependent Role="NarudzbaStavke">
+        <PropertyRef Name="KarteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kategorija_Eventi">
+    <End Role="Kategorije" Type="Self.Kategorije" Multiplicity="1" />
+    <End Role="Eventi" Type="Self.Eventi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kategorije">
+        <PropertyRef Name="KategorijaId" />
+      </Principal>
+      <Dependent Role="Eventi">
+        <PropertyRef Name="KategorijaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Korisnici_Narudzbe">
+    <End Role="Korisnici" Type="Self.Korisnici" Multiplicity="1" />
+    <End Role="Narudzbe" Type="Self.Narudzbe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnici">
+        <PropertyRef Name="KorisnikId" />
+      </Principal>
+      <Dependent Role="Narudzbe">
+        <PropertyRef Name="KorisnikId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Korisnik_KorisniciUloge">
+    <End Role="Korisnici" Type="Self.Korisnici" Multiplicity="1" />
+    <End Role="KorisniciUloge" Type="Self.KorisniciUloge" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnici">
+        <PropertyRef Name="KorisnikId" />
+      </Principal>
+      <Dependent Role="KorisniciUloge">
+        <PropertyRef Name="KorisnikId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Korisnik_Ocjene">
+    <End Role="Korisnici" Type="Self.Korisnici" Multiplicity="1" />
+    <End Role="Ocjene" Type="Self.Ocjene" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnici">
+        <PropertyRef Name="KorisnikId" />
+      </Principal>
+      <Dependent Role="Ocjene">
+        <PropertyRef Name="KorisnikId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NarudzbaStavke_Narudzba">
+    <End Role="Narudzbe" Type="Self.Narudzbe" Multiplicity="1" />
+    <End Role="NarudzbaStavke" Type="Self.NarudzbaStavke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Narudzbe">
+        <PropertyRef Name="NarudzbaId" />
+      </Principal>
+      <Dependent Role="NarudzbaStavke">
+        <PropertyRef Name="NarudzbaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Organizatori_Eventi">
+    <End Role="Organizatori" Type="Self.Organizatori" Multiplicity="1" />
+    <End Role="Eventi" Type="Self.Eventi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organizatori">
+        <PropertyRef Name="OrganizatorId" />
+      </Principal>
+      <Dependent Role="Eventi">
+        <PropertyRef Name="OrganizatorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ucesnici_EventiUcesnici">
+    <End Role="Ucesnici" Type="Self.Ucesnici" Multiplicity="1" />
+    <End Role="EventiUcesnici" Type="Self.EventiUcesnici" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ucesnici">
+        <PropertyRef Name="UcesnikId" />
+      </Principal>
+      <Dependent Role="EventiUcesnici">
+        <PropertyRef Name="UcesnikId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Uloge_KorisniciUloge">
+    <End Role="Uloge" Type="Self.Uloge" Multiplicity="1" />
+    <End Role="KorisniciUloge" Type="Self.KorisniciUloge" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uloge">
+        <PropertyRef Name="UlogaId" />
+      </Principal>
+      <Dependent Role="KorisniciUloge">
+        <PropertyRef Name="UlogaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="esp_Drzava_SelectAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="esp_EventiUcesnici_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EventiId" Type="int" Mode="In" />
+    <Parameter Name="UcesnikId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="esp_EventiUcesnici_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EventiId" Type="int" Mode="In" />
+    <Parameter Name="UcesnikId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="esp_EventiUcesnici_SelectByEventUcesnik" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EventId" Type="int" Mode="In" />
+    <Parameter Name="UcesnikId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="esp_Eventi_BasicSelectAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="esp_Eventi_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EventId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="esp_Eventi_Details" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EventId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="esp_Eventi_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Naziv" Type="nvarchar" Mode="In" />
+    <Parameter Name="Opis" Type="nvarchar" Mode="In" />
+    <Parameter Name="MinimumGodine" Type="int" Mode="In" />
+    <Parameter Name="ObjekatOdrzavanja" Type="nvarchar" Mode="In" />
+    <Parameter Name="Adresa" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganizatorId" Type="int" Mode="In" />
+    <Parameter Name="KategorijaId" Type="int" Mode="In" />
+    <Parameter Name="GradId" Type="int" Mode="In" />
+    <Parameter Name="Slika" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="SlikaThumb" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="DatumOdrzavanja" Type="datetime" Mode="In" />
+    <Parameter Name="Status" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="esp_Eventi_Karte" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EventId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="esp_Eventi_SelectAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="esp_Eventi_SelectByNaziv" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Naziv" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="esp_Eventi_SelectByVrsta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="VrstaId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="esp_Eventi_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EventId" Type="int" Mode="In" />
+    <Parameter Name="Naziv" Type="nvarchar" Mode="In" />
+    <Parameter Name="MinimumGodine" Type="int" Mode="In" />
+    <Parameter Name="ObjekatOdrazavanja" Type="nvarchar" Mode="In" />
+    <Parameter Name="Opis" Type="nvarchar" Mode="In" />
+    <Parameter Name="Adresa" Type="nvarchar" Mode="In" />
+    <Parameter Name="DatumOdrzavanja" Type="datetime" Mode="In" />
+    <Parameter Name="Status" Type="bit" Mode="In" />
+    <Parameter Name="Slika" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="SlikaThumb" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="OrganizatorId" Type="int" Mode="In" />
+    <Parameter Name="KategorijaId" Type="int" Mode="In" />
+    <Parameter Name="GradId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="esp_Grad_SelectAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="esp_Karte_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="KarteId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="esp_Karte_SelectByEventKlasa" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EventId" Type="int" Mode="In" />
+    <Parameter Name="KlasaId" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="esp_Kategorija_SelectAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="esp_KorisniciUloge_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="KorisnikId" Type="int" Mode="In" />
+    <Parameter Name="UlogaId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="esp_Korisnici_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="KorisnikId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="esp_Korisnici_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Ime" Type="nvarchar" Mode="In" />
+    <Parameter Name="Prezime" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="Telefon" Type="nvarchar" Mode="In" />
+    <Parameter Name="KorisnickoIme" Type="nvarchar" Mode="In" />
+    <Parameter Name="LozinkaSalt" Type="nvarchar" Mode="In" />
+    <Parameter Name="LozinkaHash" Type="nvarchar" Mode="In" />
+    <Parameter Name="Status" Type="bit" Mode="In" />
+    <Parameter Name="Adresa" Type="nvarchar" Mode="In" />
+    <Parameter Name="GradId" Type="int" Mode="In" />
+    <Parameter Name="Slika" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="SlikaThumb" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="esp_Korisnici_LoginSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="esp_Korisnici_SelectAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="esp_Korisnici_SelectByImePrezime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ImePrezime" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="esp_Korisnici_SimpleInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Ime" Type="nvarchar" Mode="In" />
+    <Parameter Name="Prezime" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="KorisnickoIme" Type="nvarchar" Mode="In" />
+    <Parameter Name="LozinkaSalt" Type="nvarchar" Mode="In" />
+    <Parameter Name="LozinkaHash" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="esp_Korisnici_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="KorisnikId" Type="int" Mode="In" />
+    <Parameter Name="Ime" Type="nvarchar" Mode="In" />
+    <Parameter Name="Prezime" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="Telefon" Type="nvarchar" Mode="In" />
+    <Parameter Name="KorisnickoIme" Type="nvarchar" Mode="In" />
+    <Parameter Name="LozinkaSalt" Type="nvarchar" Mode="In" />
+    <Parameter Name="LozinkaHash" Type="nvarchar" Mode="In" />
+    <Parameter Name="Status" Type="bit" Mode="In" />
+    <Parameter Name="GradId" Type="int" Mode="In" />
+    <Parameter Name="Adresa" Type="nvarchar" Mode="In" />
+    <Parameter Name="Slika" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="SlikaThumb" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="esp_NarudzbeStavke_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="KarteId" Type="int" Mode="In" />
+    <Parameter Name="BrojKarata" Type="int" Mode="In" />
+    <Parameter Name="NarudzbaId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="esp_Narudzbe_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="KorisnikId" Type="int" Mode="In" />
+    <Parameter Name="BrojNarudzbe" Type="nvarchar" Mode="In" />
+    <Parameter Name="Datum" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="esp_Narudzbe_LastId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="esp_Organizatori_BasicSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="esp_Organizatori_SelectAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="esp_Ucesnici_SelectAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="esp_Uloge_SelectAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="EventeModelStoreContainer">
+    <EntitySet Name="Drzava" EntityType="Self.Drzava" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Eventi" EntityType="Self.Eventi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EventiUcesnici" EntityType="Self.EventiUcesnici" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Grad" EntityType="Self.Grad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Karte" EntityType="Self.Karte" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kategorije" EntityType="Self.Kategorije" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Klasa" EntityType="Self.Klasa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Korisnici" EntityType="Self.Korisnici" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KorisniciUloge" EntityType="Self.KorisniciUloge" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NarudzbaStavke" EntityType="Self.NarudzbaStavke" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Narudzbe" EntityType="Self.Narudzbe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ocjene" EntityType="Self.Ocjene" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Organizatori" EntityType="Self.Organizatori" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ucesnici" EntityType="Self.Ucesnici" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Uloge" EntityType="Self.Uloge" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Drzava_Grad" Association="Self.FK_Drzava_Grad">
+      <End Role="Drzava" EntitySet="Drzava" />
+      <End Role="Grad" EntitySet="Grad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Eventi_EventiUcesnici" Association="Self.FK_Eventi_EventiUcesnici">
+      <End Role="Eventi" EntitySet="Eventi" />
+      <End Role="EventiUcesnici" EntitySet="EventiUcesnici" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Eventi_Ocjene" Association="Self.FK_Eventi_Ocjene">
+      <End Role="Eventi" EntitySet="Eventi" />
+      <End Role="Ocjene" EntitySet="Ocjene" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Grad_Eventi" Association="Self.FK_Grad_Eventi">
+      <End Role="Grad" EntitySet="Grad" />
+      <End Role="Eventi" EntitySet="Eventi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Grad_Korisnici" Association="Self.FK_Grad_Korisnici">
+      <End Role="Grad" EntitySet="Grad" />
+      <End Role="Korisnici" EntitySet="Korisnici" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Karte_Eventi" Association="Self.FK_Karte_Eventi">
+      <End Role="Eventi" EntitySet="Eventi" />
+      <End Role="Karte" EntitySet="Karte" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Karte_Klasa" Association="Self.FK_Karte_Klasa">
+      <End Role="Klasa" EntitySet="Klasa" />
+      <End Role="Karte" EntitySet="Karte" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Karte_NarudzbaStavke" Association="Self.FK_Karte_NarudzbaStavke">
+      <End Role="Karte" EntitySet="Karte" />
+      <End Role="NarudzbaStavke" EntitySet="NarudzbaStavke" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kategorija_Eventi" Association="Self.FK_Kategorija_Eventi">
+      <End Role="Kategorije" EntitySet="Kategorije" />
+      <End Role="Eventi" EntitySet="Eventi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Korisnici_Narudzbe" Association="Self.FK_Korisnici_Narudzbe">
+      <End Role="Korisnici" EntitySet="Korisnici" />
+      <End Role="Narudzbe" EntitySet="Narudzbe" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Korisnik_KorisniciUloge" Association="Self.FK_Korisnik_KorisniciUloge">
+      <End Role="Korisnici" EntitySet="Korisnici" />
+      <End Role="KorisniciUloge" EntitySet="KorisniciUloge" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Korisnik_Ocjene" Association="Self.FK_Korisnik_Ocjene">
+      <End Role="Korisnici" EntitySet="Korisnici" />
+      <End Role="Ocjene" EntitySet="Ocjene" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NarudzbaStavke_Narudzba" Association="Self.FK_NarudzbaStavke_Narudzba">
+      <End Role="Narudzbe" EntitySet="Narudzbe" />
+      <End Role="NarudzbaStavke" EntitySet="NarudzbaStavke" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Organizatori_Eventi" Association="Self.FK_Organizatori_Eventi">
+      <End Role="Organizatori" EntitySet="Organizatori" />
+      <End Role="Eventi" EntitySet="Eventi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ucesnici_EventiUcesnici" Association="Self.FK_Ucesnici_EventiUcesnici">
+      <End Role="Ucesnici" EntitySet="Ucesnici" />
+      <End Role="EventiUcesnici" EntitySet="EventiUcesnici" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Uloge_KorisniciUloge" Association="Self.FK_Uloge_KorisniciUloge">
+      <End Role="Uloge" EntitySet="Uloge" />
+      <End Role="KorisniciUloge" EntitySet="KorisniciUloge" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

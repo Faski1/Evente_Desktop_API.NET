@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evente_API", "Evente_API\Evente_API.csproj", "{4685C778-15E7-4B77-AA05-4B4D4C879B19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evente_UI", "Evente_UI\Evente_UI.csproj", "{43C914E6-CAF0-4BFB-8030-9B210DADCEC1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4685C778-15E7-4B77-AA05-4B4D4C879B19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4685C778-15E7-4B77-AA05-4B4D4C879B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4685C778-15E7-4B77-AA05-4B4D4C879B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4685C778-15E7-4B77-AA05-4B4D4C879B19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43C914E6-CAF0-4BFB-8030-9B210DADCEC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43C914E6-CAF0-4BFB-8030-9B210DADCEC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43C914E6-CAF0-4BFB-8030-9B210DADCEC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43C914E6-CAF0-4BFB-8030-9B210DADCEC1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5FD5AAF-D6AA-440B-92BD-759A2A6C77C3}
+	EndGlobalSection
+EndGlobal

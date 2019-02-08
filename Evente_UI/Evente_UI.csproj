@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43C914E6-CAF0-4BFB-8030-9B210DADCEC1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Evente_UI</RootNamespace>
+    <AssemblyName>Evente_UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\EventeApp\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\EventeApp\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\EventeApp\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\EventeApp\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\EventeApp\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\EventeApp\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\EventeApp\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\EventeApp\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\EventeApp\packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Categories\AddCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categories\AddCategories.designer.cs">
+      <DependentUpon>AddCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cities\AddGrad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cities\AddGrad.designer.cs">
+      <DependentUpon>AddGrad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Countries\AddDrzava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Countries\AddDrzava.designer.cs">
+      <DependentUpon>AddDrzava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EventeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Events\AddEventi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events\AddEventi.Designer.cs">
+      <DependentUpon>AddEventi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\EditEventi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events\EditEventi.designer.cs">
+      <DependentUpon>EditEventi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\EventiMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events\EventiMain.designer.cs">
+      <DependentUpon>EventiMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\Participants\AddUcesnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events\Participants\AddUcesnik.designer.cs">
+      <DependentUpon>AddUcesnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\Participants\PregledUcesnici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events\Participants\PregledUcesnici.Designer.cs">
+      <DependentUpon>PregledUcesnici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\Participants\UcesniciMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events\Participants\UcesniciMain.designer.cs">
+      <DependentUpon>UcesniciMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\PregledEventi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events\PregledEventi.designer.cs">
+      <DependentUpon>PregledEventi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainLoginForm.Designer.cs">
+      <DependentUpon>MainLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Organisers\AddOrganizatori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organisers\AddOrganizatori.designer.cs">
+      <DependentUpon>AddOrganizatori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Participants\AddUcesnici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Participants\AddUcesnici.designer.cs">
+      <DependentUpon>AddUcesnici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportMain.designer.cs">
+      <DependentUpon>ReportMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportPretraga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportPretraga.designer.cs">
+      <DependentUpon>ReportPretraga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportSifra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportSifra.designer.cs">
+      <DependentUpon>ReportSifra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportViewForm.designer.cs">
+      <DependentUpon>ReportViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Tickets\KarteMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tickets\KarteMain.designer.cs">
+      <DependentUpon>KarteMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tickets\PregledKarte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tickets\PregledKarte.Designer.cs">
+      <DependentUpon>PregledKarte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tickets\TicketClasses\AddKlasa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tickets\TicketClasses\AddKlasa.designer.cs">
+      <DependentUpon>AddKlasa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tickets\Unos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tickets\Unos.Designer.cs">
+      <DependentUpon>Unos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\AddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\AddForm.Designer.cs">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\EditForm.designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\KorisniciMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\KorisniciMain.Designer.cs">
+      <DependentUpon>KorisniciMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\PregledKorisnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\PregledKorisnika.designer.cs">
+      <DependentUpon>PregledKorisnika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\NavHelper.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Util\UIHelper.cs" />
+    <Compile Include="Util\WebAPIHelper.cs" />
+    <EmbeddedResource Include="Categories\AddCategories.resx">
+      <DependentUpon>AddCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cities\AddGrad.resx">
+      <DependentUpon>AddGrad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Countries\AddDrzava.resx">
+      <DependentUpon>AddDrzava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events\AddEventi.resx">
+      <DependentUpon>AddEventi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events\EditEventi.resx">
+      <DependentUpon>EditEventi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events\EventiMain.resx">
+      <DependentUpon>EventiMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events\Participants\AddUcesnik.resx">
+      <DependentUpon>AddUcesnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events\Participants\PregledUcesnici.resx">
+      <DependentUpon>PregledUcesnici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events\Participants\UcesniciMain.resx">
+      <DependentUpon>UcesniciMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events\PregledEventi.resx">
+      <DependentUpon>PregledEventi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainLoginForm.resx">
+      <DependentUpon>MainLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organisers\AddOrganizatori.resx">
+      <DependentUpon>AddOrganizatori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Participants\AddUcesnici.resx">
+      <DependentUpon>AddUcesnici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportMain.resx">
+      <DependentUpon>ReportMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportPretraga.resx">
+      <DependentUpon>ReportPretraga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportSifra.resx">
+      <DependentUpon>ReportSifra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportViewForm.resx">
+      <DependentUpon>ReportViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TicketsOrdersReport.rdlc" />
+    <EmbeddedResource Include="Tickets\KarteMain.resx">
+      <DependentUpon>KarteMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tickets\PregledKarte.resx">
+      <DependentUpon>PregledKarte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tickets\TicketClasses\AddKlasa.resx">
+      <DependentUpon>AddKlasa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tickets\Unos.resx">
+      <DependentUpon>Unos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Users\AddForm.resx">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\KorisniciMain.resx">
+      <DependentUpon>KorisniciMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\PregledKorisnika.resx">
+      <DependentUpon>PregledKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="EventeDataSet.xsc">
+      <DependentUpon>EventeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EventeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EventeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EventeDataSet.xss">
+      <DependentUpon>EventeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Evente_API.Models.EventiUcesnici_SearchResult.datasource" />
+    <None Include="Properties\DataSources\Evente_API.Models.Eventi_Report.datasource" />
+    <None Include="Properties\DataSources\Evente_API.Models.Eventi_SearchResult.datasource" />
+    <None Include="Properties\DataSources\Evente_API.Models.Grad_Result.datasource" />
+    <None Include="Properties\DataSources\Evente_API.Models.Karte.datasource" />
+    <None Include="Properties\DataSources\Evente_API.Models.Karte_SearchResult.datasource" />
+    <None Include="Properties\DataSources\Evente_API.Models.Korisnici_Result.datasource" />
+    <None Include="Properties\DataSources\Evente_API.Models.NarudzbaStavke.datasource" />
+    <None Include="Properties\DataSources\Evente_API.Models.Narudzbe.datasource" />
+    <None Include="Properties\DataSources\Evente_API.Models.Ucesnici.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Event_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Location_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\82d65338-e433-47c2-84a8-a6c522ed21d4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Izmjena_icon_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_icon_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_icon_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\View_icon_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-train-ticket-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Evente_API\Evente_API.csproj">
+      <Project>{4685c778-15e7-4b77-aa05-4b4d4c879b19}</Project>
+      <Name>Evente_API</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Izvjestaji.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e87e169d0a5b40cc9d7b60b50a79b3cc" Name="Diagram1" ZoomLevel="65">
+        <EntityTypeShape EntityType="EventeModel.Drzava" PointX="1.5" PointY="10.75" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventeModel.Eventi" PointX="3" PointY="2.75" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventeModel.EventiUcesnici" PointX="5.25" PointY="4.25" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventeModel.Grad" PointX="0.75" PointY="7.375" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventeModel.Karte" PointX="5.625" PointY="8.375" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventeModel.Kategorije" PointX="0.75" PointY="1" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventeModel.Korisnici" PointX="10.25" PointY="1.75" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventeModel.KorisniciUloge" PointX="9.25" PointY="8.5" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventeModel.Narudzbe" PointX="7.5" PointY="4.125" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventeModel.Ocjene" PointX="5.25" PointY="1" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventeModel.Organizatori" PointX="3.75" PointY="9.25" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventeModel.Ucesnici" PointX="0.75" PointY="4.25" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventeModel.Uloge" PointX="7.625" PointY="8.25" Width="1.5" IsExpanded="true" />
+        <AssociationConnector ManuallyRouted="false" Association="EventeModel.FK_Drzava_Grad" />
+        <AssociationConnector ManuallyRouted="false" Association="EventeModel.FK_Eventi_EventiUcesnici" />
+        <AssociationConnector ManuallyRouted="false" Association="EventeModel.FK_Eventi_Karte" />
+        <AssociationConnector ManuallyRouted="false" Association="EventeModel.FK_Eventi_Ocjene" />
+        <AssociationConnector ManuallyRouted="false" Association="EventeModel.FK_Kategorija_Eventi" />
+        <AssociationConnector ManuallyRouted="false" Association="EventeModel.FK_Organizatori_Eventi" />
+        <AssociationConnector ManuallyRouted="false" Association="EventeModel.FK_Ucesnici_EventiUcesnici" />
+        <AssociationConnector ManuallyRouted="false" Association="EventeModel.FK_Korisnici_Narudzbe" />
+        <AssociationConnector ManuallyRouted="false" Association="EventeModel.FK_Korisnik_KorisniciUloge" />
+        <AssociationConnector ManuallyRouted="false" Association="EventeModel.FK_Korisnik_Ocjene" />
+        <AssociationConnector ManuallyRouted="false" Association="EventeModel.FK_Uloge_KorisniciUloge" />
+        <AssociationConnector Association="EventeModel.FK_Grad_Eventi" />
+        <AssociationConnector Association="EventeModel.FK_Grad_Korisnici" />
+        <EntityTypeShape EntityType="EventeModel.Klasa" Width="1.5" PointX="6.375" PointY="11.875" />
+        <AssociationConnector Association="EventeModel.FK_Karte_Klasa" />
+        <EntityTypeShape EntityType="EventeModel.NarudzbaStavke" Width="1.5" PointX="11.75" PointY="8.5" />
+        <AssociationConnector Association="EventeModel.FK_Karte_NarudzbaStavke" />
+        <AssociationConnector Association="EventeModel.FK_NarudzbaStavke_Narudzba" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

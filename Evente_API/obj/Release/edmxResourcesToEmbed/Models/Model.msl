@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EventeModelStoreContainer" CdmEntityContainer="EventeEntities">
+    <EntitySetMapping Name="Drzavas">
+      <EntityTypeMapping TypeName="EventeModel.Drzava">
+        <MappingFragment StoreEntitySet="Drzava">
+          <ScalarProperty Name="DrzavaId" ColumnName="DrzavaId" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Eventis">
+      <EntityTypeMapping TypeName="EventeModel.Eventi">
+        <MappingFragment StoreEntitySet="Eventi">
+          <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+          <ScalarProperty Name="Slika" ColumnName="Slika" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DatumOdrzavanja" ColumnName="DatumOdrzavanja" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="GradId" ColumnName="GradId" />
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="MinimumGodine" ColumnName="MinimumGodine" />
+          <ScalarProperty Name="ObjekatOdrzavanja" ColumnName="ObjekatOdrzavanja" />
+          <ScalarProperty Name="OrganizatorId" ColumnName="OrganizatorId" />
+          <ScalarProperty Name="KategorijaId" ColumnName="KategorijaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventiUcesnicis">
+      <EntityTypeMapping TypeName="EventeModel.EventiUcesnici">
+        <MappingFragment StoreEntitySet="EventiUcesnici">
+          <ScalarProperty Name="UcesnikId" ColumnName="UcesnikId" />
+          <ScalarProperty Name="EventiId" ColumnName="EventiId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grads">
+      <EntityTypeMapping TypeName="EventeModel.Grad">
+        <MappingFragment StoreEntitySet="Grad">
+          <ScalarProperty Name="GradId" ColumnName="GradId" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="PostanskiBroj" ColumnName="PostanskiBroj" />
+          <ScalarProperty Name="DrzavaId" ColumnName="DrzavaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kartes">
+      <EntityTypeMapping TypeName="EventeModel.Karte">
+        <MappingFragment StoreEntitySet="Karte">
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="KlasaId" ColumnName="KlasaId" />
+          <ScalarProperty Name="KarteId" ColumnName="KarteId" />
+          <ScalarProperty Name="BrojKarata" ColumnName="BrojKarata" />
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kategorijes">
+      <EntityTypeMapping TypeName="EventeModel.Kategorije">
+        <MappingFragment StoreEntitySet="Kategorije">
+          <ScalarProperty Name="KategorijaId" ColumnName="KategorijaId" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Korisnicis">
+      <EntityTypeMapping TypeName="EventeModel.Korisnici">
+        <MappingFragment StoreEntitySet="Korisnici">
+          <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+          <ScalarProperty Name="Slika" ColumnName="Slika" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="GradId" ColumnName="GradId" />
+          <ScalarProperty Name="KorisnikId" ColumnName="KorisnikId" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="KorisnickoIme" ColumnName="KorisnickoIme" />
+          <ScalarProperty Name="LozinkaHash" ColumnName="LozinkaHash" />
+          <ScalarProperty Name="LozinkaSalt" ColumnName="LozinkaSalt" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KorisniciUloges">
+      <EntityTypeMapping TypeName="EventeModel.KorisniciUloge">
+        <MappingFragment StoreEntitySet="KorisniciUloge">
+          <ScalarProperty Name="KorisnikUlogaId" ColumnName="KorisnikUlogaId" />
+          <ScalarProperty Name="KorisnikId" ColumnName="KorisnikId" />
+          <ScalarProperty Name="UlogaId" ColumnName="UlogaId" />
+          <ScalarProperty Name="DatumIzmjene" ColumnName="DatumIzmjene" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Narudzbes">
+      <EntityTypeMapping TypeName="EventeModel.Narudzbe">
+        <MappingFragment StoreEntitySet="Narudzbe">
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="BrojNarudzbe" ColumnName="BrojNarudzbe" />
+          <ScalarProperty Name="Otkazano" ColumnName="Otkazano" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="NarudzbaId" ColumnName="NarudzbaId" />
+          <ScalarProperty Name="KorisnikId" ColumnName="KorisnikId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ocjenes">
+      <EntityTypeMapping TypeName="EventeModel.Ocjene">
+        <MappingFragment StoreEntitySet="Ocjene">
+          <ScalarProperty Name="OcjenaId" ColumnName="OcjenaId" />
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="KorisnikId" ColumnName="KorisnikId" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="Ocjena" ColumnName="Ocjena" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Organizatoris">
+      <EntityTypeMapping TypeName="EventeModel.Organizatori">
+        <MappingFragment StoreEntitySet="Organizatori">
+          <ScalarProperty Name="OrganizatorId" ColumnName="OrganizatorId" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Web" ColumnName="Web" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ZiroRacun" ColumnName="ZiroRacun" />
+          <ScalarProperty Name="Napomena" ColumnName="Napomena" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ucesnicis">
+      <EntityTypeMapping TypeName="EventeModel.Ucesnici">
+        <MappingFragment StoreEntitySet="Ucesnici">
+          <ScalarProperty Name="UcesnikId" ColumnName="UcesnikId" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Uloges">
+      <EntityTypeMapping TypeName="EventeModel.Uloge">
+        <MappingFragment StoreEntitySet="Uloge">
+          <ScalarProperty Name="UlogaId" ColumnName="UlogaId" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="esp_Korisnici_SelectAll" FunctionName="EventeModel.Store.esp_Korisnici_SelectAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EventeModel.Korisnici_Result">
+          <ScalarProperty Name="KorisnikId" ColumnName="KorisnikId" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="KorisnickoIme" ColumnName="KorisnickoIme" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Korisnici_SelectByImePrezime" FunctionName="EventeModel.Store.esp_Korisnici_SelectByImePrezime">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EventeModel.Korisnici_Result">
+          <ScalarProperty Name="KorisnikId" ColumnName="KorisnikId" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="KorisnickoIme" ColumnName="KorisnickoIme" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Grad_SelectAll" FunctionName="EventeModel.Store.esp_Grad_SelectAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EventeModel.Grad_Result">
+          <ScalarProperty Name="GradId" ColumnName="GradId" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Drzava_SelectAll" FunctionName="EventeModel.Store.esp_Drzava_SelectAll" />
+    <FunctionImportMapping FunctionImportName="esp_Korisnici_Update" FunctionName="EventeModel.Store.esp_Korisnici_Update" />
+    <FunctionImportMapping FunctionImportName="esp_KorisniciUloge_Insert" FunctionName="EventeModel.Store.esp_KorisniciUloge_Insert" />
+    <FunctionImportMapping FunctionImportName="esp_Uloge_SelectAll" FunctionName="EventeModel.Store.esp_Uloge_SelectAll" />
+    <FunctionImportMapping FunctionImportName="esp_Korisnici_Delete" FunctionName="EventeModel.Store.esp_Korisnici_Delete" />
+    <FunctionImportMapping FunctionImportName="esp_Korisnici_Insert" FunctionName="EventeModel.Store.esp_Korisnici_Insert" />
+    <FunctionImportMapping FunctionImportName="esp_Organizatori_SelectAll" FunctionName="EventeModel.Store.esp_Organizatori_SelectAll" />
+    <FunctionImportMapping FunctionImportName="esp_Organizatori_BasicSelect" FunctionName="EventeModel.Store.esp_Organizatori_BasicSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EventeModel.Organizatori_Result">
+          <ScalarProperty Name="OrganizatorId" ColumnName="OrganizatorId" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Kategorija_SelectAll" FunctionName="EventeModel.Store.esp_Kategorija_SelectAll" />
+    <FunctionImportMapping FunctionImportName="esp_Ucesnici_SelectAll" FunctionName="EventeModel.Store.esp_Ucesnici_SelectAll" />
+    <FunctionImportMapping FunctionImportName="esp_Eventi_SelectAll" FunctionName="EventeModel.Store.esp_Eventi_SelectAll" />
+    <FunctionImportMapping FunctionImportName="esp_Eventi_Insert" FunctionName="EventeModel.Store.esp_Eventi_Insert" />
+    <FunctionImportMapping FunctionImportName="esp_EventiUcesnici_Insert" FunctionName="EventeModel.Store.esp_EventiUcesnici_Insert" />
+    <FunctionImportMapping FunctionImportName="esp_Eventi_BasicSelectAll" FunctionName="EventeModel.Store.esp_Eventi_BasicSelectAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EventeModel.Eventi_Result">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Klasas">
+      <EntityTypeMapping TypeName="EventeModel.Klasa">
+        <MappingFragment StoreEntitySet="Klasa">
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="esp_Eventi_SelectByNaziv" FunctionName="EventeModel.Store.esp_Eventi_SelectByNaziv">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EventeModel.Eventi_SearchResult">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="MinimumGodine" ColumnName="MinimumGodine" />
+          <ScalarProperty Name="ObjekatOdrzavanja" ColumnName="ObjekatOdrzavanja" />
+          <ScalarProperty Name="Organizatori" ColumnName="Organizatori" />
+          <ScalarProperty Name="Kategorija" ColumnName="Kategorija" />
+          <ScalarProperty Name="Grad" ColumnName="Grad" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="DatumOdrzavanja" ColumnName="DatumOdrzavanja" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Eventi_Delete" FunctionName="EventeModel.Store.esp_Eventi_Delete" />
+    <FunctionImportMapping FunctionImportName="esp_Eventi_Update" FunctionName="EventeModel.Store.esp_Eventi_Update" />
+    <FunctionImportMapping FunctionImportName="esp_EventiUcesnici_SelectByEventUcesnik" FunctionName="EventeModel.Store.esp_EventiUcesnici_SelectByEventUcesnik">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EventeModel.EventiUcesnici_SearchResult">
+          <ScalarProperty Name="EventiId" ColumnName="EventiId" />
+          <ScalarProperty Name="UcesnikId" ColumnName="UcesnikId" />
+          <ScalarProperty Name="EventNaziv" ColumnName="EventNaziv" />
+          <ScalarProperty Name="UcesnikNaziv" ColumnName="UcesnikNaziv" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_EventiUcesnici_Delete" FunctionName="EventeModel.Store.esp_EventiUcesnici_Delete" />
+    <FunctionImportMapping FunctionImportName="esp_Karte_SelectByEventKlasa" FunctionName="EventeModel.Store.esp_Karte_SelectByEventKlasa">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EventeModel.Karte_SearchResult">
+          <ScalarProperty Name="KarteId" ColumnName="KarteId" />
+          <ScalarProperty Name="EventNaziv" ColumnName="EventNaziv" />
+          <ScalarProperty Name="KlasaNaziv" ColumnName="KlasaNaziv" />
+          <ScalarProperty Name="BrojKarata" ColumnName="BrojKarata" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Karte_Delete" FunctionName="EventeModel.Store.esp_Karte_Delete" />
+    <FunctionImportMapping FunctionImportName="esp_Korisnici_LoginSelect" FunctionName="EventeModel.Store.esp_Korisnici_LoginSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EventeModel.Korisnici_LoginResult">
+          <ScalarProperty Name="KorisnikId" ColumnName="KorisnikId" />
+          <ScalarProperty Name="KorisnickoIme" ColumnName="KorisnickoIme" />
+          <ScalarProperty Name="LozinkaSalt" ColumnName="LozinkaSalt" />
+          <ScalarProperty Name="LozinkaHash" ColumnName="LozinkaHash" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="UlogaId" ColumnName="UlogaId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Korisnici_SimpleInsert" FunctionName="EventeModel.Store.esp_Korisnici_SimpleInsert" />
+    <FunctionImportMapping FunctionImportName="esp_Eventi_SelectByVrsta" FunctionName="EventeModel.Store.esp_Eventi_SelectByVrsta">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EventeModel.Eventi_SelectByVrsta">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Grad" ColumnName="Grad" />
+          <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Eventi_Details" FunctionName="EventeModel.Store.esp_Eventi_Details">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EventeModel.Eventi_DetailsResult">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="MinimumGodine" ColumnName="MinimumGodine" />
+          <ScalarProperty Name="ObjekatOdrzavanja" ColumnName="ObjekatOdrzavanja" />
+          <ScalarProperty Name="Grad" ColumnName="Grad" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="DatumOdrzavanja" ColumnName="DatumOdrzavanja" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Kategorija" ColumnName="Kategorija" />
+          <ScalarProperty Name="Slika" ColumnName="Slika" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Eventi_Karte" FunctionName="EventeModel.Store.esp_Eventi_Karte">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EventeModel.Karte_KategorijaResult">
+          <ScalarProperty Name="Klasa" ColumnName="Klasa" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="BrojKarata" ColumnName="BrojKarata" />
+          <ScalarProperty Name="KarteId" ColumnName="KarteId" />
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="NarudzbaStavkes">
+      <EntityTypeMapping TypeName="EventeModel.NarudzbaStavke">
+        <MappingFragment StoreEntitySet="NarudzbaStavke">
+          <ScalarProperty Name="NarudzbaId" ColumnName="NarudzbaId" />
+          <ScalarProperty Name="BrojKarata" ColumnName="BrojKarata" />
+          <ScalarProperty Name="KarteId" ColumnName="KarteId" />
+          <ScalarProperty Name="NarudzbaStavkeId" ColumnName="NarudzbaStavkeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="esp_Narudzbe_Insert" FunctionName="EventeModel.Store.esp_Narudzbe_Insert" />
+    <FunctionImportMapping FunctionImportName="esp_NarudzbeStavke_Insert" FunctionName="EventeModel.Store.esp_NarudzbeStavke_Insert" />
+    <FunctionImportMapping FunctionImportName="esp_Karte_Korisnici_Kupljene" FunctionName="EventeModel.Store.esp_Karte_Korisnici_Kupljene">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EventeModel.Karte_Korisnici_Kupljene">
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="DatumOdrzavanja" ColumnName="DatumOdrzavanja" />
+          <ScalarProperty Name="Klasa" ColumnName="Klasa" />
+          <ScalarProperty Name="Kupljeno" ColumnName="Kupljeno" />
+          <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Korisnci_GetBasicInfo" FunctionName="EventeModel.Store.esp_Korisnci_GetBasicInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EventeModel.Korisnici_BasicInfo">
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="KorisnickoIme" ColumnName="KorisnickoIme" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Eventi_Report" FunctionName="EventeModel.Store.esp_Eventi_Report">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EventeModel.Eventi_Report">
+          <ScalarProperty Name="EventNaziv" ColumnName="EventNaziv" />
+          <ScalarProperty Name="BrojKarata" ColumnName="BrojKarata" />
+          <ScalarProperty Name="KlasaId" ColumnName="KlasaId" />
+          <ScalarProperty Name="OrganizatorNaziv" ColumnName="OrganizatorNaziv" />
+          <ScalarProperty Name="DatumNarudzbe" ColumnName="DatumNarudzbe" />
+          <ScalarProperty Name="BrojNarudzbe" ColumnName="BrojNarudzbe" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Eventi_SifraReport" FunctionName="EventeModel.Store.esp_Eventi_SifraReport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EventeModel.Eventi_Report">
+          <ScalarProperty Name="EventNaziv" ColumnName="EventNaziv" />
+          <ScalarProperty Name="BrojKarata" ColumnName="BrojKarata" />
+          <ScalarProperty Name="KlasaId" ColumnName="KlasaId" />
+          <ScalarProperty Name="OrganizatorNaziv" ColumnName="OrganizatorNaziv" />
+          <ScalarProperty Name="DatumNarudzbe" ColumnName="DatumNarudzbe" />
+          <ScalarProperty Name="BrojNarudzbe" ColumnName="BrojNarudzbe" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Ocjena_Insert" FunctionName="EventeModel.Store.esp_Ocjena_Insert" />
+    <FunctionImportMapping FunctionImportName="esp_Kategorije_Omiljena" FunctionName="EventeModel.Store.esp_Kategorije_Omiljena">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EventeModel.Kategorije_Omiljena">
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="BrojKupovina" ColumnName="BrojKupovina" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Eventi_Kategorija_NeKupljeni" FunctionName="EventeModel.Store.esp_Eventi_Kategorija_NeKupljeni">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EventeModel.Eventi_Result">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Ocjene_Event_Prosjecna" FunctionName="EventeModel.Store.esp_Ocjene_Event_Prosjecna" />
+    <FunctionImportMapping FunctionImportName="esp_Eventi_Preporuceni" FunctionName="EventeModel.Store.esp_Eventi_Preporuceni">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EventeModel.Eventi_Preporuceni">
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+          <ScalarProperty Name="DatumOdrzavanja" ColumnName="DatumOdrzavanja" />
+          <ScalarProperty Name="Kategorija" ColumnName="Kategorija" />
+          <ScalarProperty Name="ProsjecnaOcjena" ColumnName="ProsjecnaOcjena" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Eventi_PreporuceniBezKategorije" FunctionName="EventeModel.Store.esp_Eventi_PreporuceniBezKategorije">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EventeModel.Eventi_Preporuceni">
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+          <ScalarProperty Name="DatumOdrzavanja" ColumnName="DatumOdrzavanja" />
+          <ScalarProperty Name="Kategorija" ColumnName="Kategorija" />
+          <ScalarProperty Name="ProsjecnaOcjena" ColumnName="ProsjecnaOcjena" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
